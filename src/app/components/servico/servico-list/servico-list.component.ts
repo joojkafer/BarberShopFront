@@ -15,7 +15,7 @@ import { LoginService } from '../../../../auth/login.service';
   styleUrls: ['./servico-list.component.scss']
 })
 export class ServicoListComponent {
-  loginService = Inject(LoginService);
+  loginService = inject(LoginService);
   lista: Servico[] = [];
   currentRoute: string;
   servicoService = inject(ServicoService);
