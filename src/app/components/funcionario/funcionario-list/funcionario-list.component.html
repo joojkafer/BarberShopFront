@@ -1,0 +1,54 @@
+<div class="container main">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Funcionários</h2>
+            </div>
+            <div class="col-md-6 text-end">
+              <button type="button" class="btn btn-primary" (click)="cadastrar()">Cadastrar</button>
+            </div>
+          </div>
+          <table border="1" class="table table-striped tbtop">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Login</th>
+                <th>Cargo</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let funcionario of lista; trackBy: trackById">
+                <td>{{funcionario.nome}}</td>
+                <td>{{funcionario.login}}</td>
+                <td>{{funcionario.role}}</td>
+                <td>
+                  <div class="d-flex align-items-center">
+                    <button type="button" class="btn btn-primary actionbtn me-2" (click)="editar(funcionario.idUsuario)" mdbRipple>
+                      Editar
+                    </button>
+                    @if(loginService.hasPermission("ADMIN")){
+                    <button type="button" class="btn btn-danger actionbtn" (click)="excluir(funcionario.idUsuario)" mdbRipple>
+                      Excluir
+                    </button>
+                  }
+                  </div>
+                </td>
+              </tr>
+              <tr *ngIf="lista.length === 0">
+                <td colspan="4" class="text-center">Nenhum funcionário encontrado.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #modalFuncionarioForm>
+  <app-funcionario-form [funcionario]="selectedFuncionario" (retorno)="onRetorno($event)"></app-funcionario-form>
+</ng-template>

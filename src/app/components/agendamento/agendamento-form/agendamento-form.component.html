@@ -1,0 +1,55 @@
+<div class="container main">
+  <div class="card">
+    <div class="card-body">
+      <h2>{{ agendamento.idAgendamento ? 'Editar Agendamento' : 'Novo Agendamento' }}</h2>
+      <form (ngSubmit)="salvar()">
+        
+        <!-- Campo Horário -->
+        <div class="mb-3">
+          <label for="horario" class="form-label">Horário</label>
+          <input
+            type="datetime-local"
+            [(ngModel)]="agendamento.horariosAgendamento"
+            name="horario"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <!-- Campo Cliente -->
+        <div class="mb-3">
+          <label for="cliente" class="form-label">Cliente</label>
+          <select [(ngModel)]="agendamento.cliente.idCliente" name="cliente" class="form-control" required>
+            @for (cliente of listaClientes; track $index) {
+              <option [value]="cliente.idCliente">{{ cliente.nome }}</option>
+            }
+          </select>
+        </div>
+
+        <!-- Campo Barbeiro -->
+        <div class="mb-3">
+          <label for="barbeiro" class="form-label">Barbeiro</label>
+          <select [(ngModel)]="agendamento.barbeiro.idBarbeiro" name="barbeiro" class="form-control" required>
+            @for (barbeiro of listaBarbeiros; track $index) {
+              <option [value]="barbeiro.idBarbeiro">{{ barbeiro.nome }}</option>
+            }
+          </select>
+        </div>
+
+        <!-- Campo Serviços (Seleção múltipla) -->
+        <div class="mb-3">
+          <label for="servicos" class="form-label">Serviços</label>
+          <select [(ngModel)]="agendamento.servicos" name="servicos" class="form-control" multiple required>
+            @for (servico of listaServicos; track $index) {
+              <option [ngValue]="servico">{{ servico.nome }}</option>
+            }
+          </select>
+        </div>
+
+        <!-- Botões de Ação -->
+        <button type="submit" class="btn btn-primary">{{ agendamento.idAgendamento ? 'Atualizar' : 'Cadastrar' }}</button>
+        <button type="button" class="btn btn-secondary" (click)="fecharModal()">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>

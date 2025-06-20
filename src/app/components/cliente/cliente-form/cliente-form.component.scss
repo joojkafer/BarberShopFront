@@ -1,0 +1,58 @@
+/* Container Principal */
+.container.main {
+    color: #00ff99;
+  }
+  
+  /* Card */
+  .card {
+    background-color: #191919;
+    color: #00ff99;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Título */
+  .card-body h2 {
+    color: #00ff99;
+    font-weight: bold;
+  }
+  
+  /* Inputs */
+  .form-control {
+    background-color: #f7f7f7;
+    color: #020101;
+    border: 1px solid #4b4a4a;
+    border-radius: 0.5rem;
+  }
+  
+  .form-control:focus {
+    border-color: #00ff99;
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 153, 0.25);
+  }
+  
+  .form-label {
+    color: #00ff99;
+  }
+  
+  /* Botão */
+  .btn-primary {
+    background-color: #00ff99;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .btn-primary:disabled {
+    background-color: #999;
+    color: #333;
+  }
+  
+  .btn-primary:hover {
+    background-color: #00cc77;
+  }
+  

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/admin/dashboard">
+      
+      BarberEase
+    </a>
+    <button class="navbar-toggler" type="button" (click)="basicNavbar.toggle()" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" mdbCollapse #basicNavbar="mdbCollapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="admin/dashboard"><i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="admin/agendamento"><i class="fas fa-calendar-alt me-2"></i>Agendamentos</a>
+        </li>
+
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/admin/pagina-admin">
+      <i class="fas fa-user-shield me-2"></i>Área Admin
+    </a>
+  </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="admin/barbeiro"><i class="fas fa-user-tie me-2"></i>Barbeiros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin/servico"><i class="fas fa-cut me-2"></i>Serviços</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin/funcionario"><i class="fas fa-users me-2"></i>Funcionário</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin/cliente"><i class="fas fa-user me-2"></i>Cliente</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i>Sair</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

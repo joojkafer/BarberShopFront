@@ -1,0 +1,55 @@
+<section class="vh-100 gradient-custom">
+  <div class="container-fluid h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <img src="/assets/images/image.png" class="img-fluid barber-image" alt="Imagem de um barbeiro atendendo um cliente">
+      </div>
+      <div class="col-md-4">
+        <div class="card custom-card">
+          <div class="card-body text-center">
+            <h2 class="fw-bold mb-4 text-success">REGISTRAR</h2>
+            <form (ngSubmit)="registrar()">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  id="usuario"
+                  class="form-control custom-input"
+                  [(ngModel)]="registro.username"
+                  name="usuario"
+                  placeholder="Usuário"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  id="senha"
+                  class="form-control custom-input"
+                  [(ngModel)]="registro.password"
+                  name="senha"
+                  placeholder="Senha"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <input
+                  type="password"
+                  id="confirmarSenha"
+                  class="form-control custom-input"
+                  [(ngModel)]="registro.confirmarSenha"
+                  name="confirmarSenha"
+                  placeholder="Confirmar Senha"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn custom-button">REGISTRAR</button>
+              <div class="d-flex justify-content-center mt-3">
+                <a href="/login" class="text-success">Já possui uma conta? Faça login</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

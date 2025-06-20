@@ -1,0 +1,26 @@
+<div class="container main">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="fw-bold mb-4 text-center">
+        {{ isEditMode ? 'Editar Cliente' : 'Cadastrar Cliente' }}
+      </h2>
+      <form #formulario="ngForm">
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="text" id="nome" class="form-control" name="nome" [(ngModel)]="cliente.nome" required />
+          <label mdbLabel class="form-label" for="nome">Nome</label>
+        </mdb-form-control>
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="text" id="cpf" class="form-control" name="cpf" [(ngModel)]="cliente.cpf" required />
+          <label mdbLabel class="form-label" for="cpf">CPF</label>
+        </mdb-form-control>
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="text" id="telefone" class="form-control" name="telefone" [(ngModel)]="cliente.telefone" required />
+          <label mdbLabel class="form-label" for="telefone">Telefone</label>
+        </mdb-form-control>
+        <button mdbRipple type="button" class="btn btn-primary btn-block" [disabled]="!formulario.valid" (click)="salvar()">
+          {{ isEditMode ? 'Atualizar' : 'Salvar' }}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

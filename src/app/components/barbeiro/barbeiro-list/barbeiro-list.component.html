@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title text-center mb-4">Lista de Barbeiros</h5>
+
+          <div class="mb-3 d-flex justify-content-end">
+            <button class="btn btn-success" (click)="abrirModalBarbeiro()">Cadastrar </button>
+          </div>
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (barbeiro of barbeiros; track barbeiro.idBarbeiro) {
+                <tr>
+                  <td>{{ barbeiro.idBarbeiro }}</td>
+                  <td>{{ barbeiro.nome }}</td>
+                  <td>{{ barbeiro.cpf }}</td>
+                  <td>{{ barbeiro.status ? 'Ativo' : 'Inativo' }}</td>
+                  <td>
+                    <button class="btn btn-primary me-2" (click)="editarBarbeiro(barbeiro)">Editar</button>
+                    @if(loginService.hasPermission("ADMIN")){
+                    <button class="btn btn-danger" (click)="excluirBarbeiro(barbeiro)">Excluir</button>
+                    }
+                  </td>
+                </tr>
+              } @empty {
+                <tr>
+                  <td class="text-center" colspan="5">Não há barbeiros cadastrados.</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+
+          <h5 class="card-title">Exibindo {{ barbeiros.length }} barbeiros</h5>
+
+          <!-- Modal para Formulário de Barbeiro -->
+          <ng-template #modalBarbeiro>
+            <app-barbeiro-form (retorno)="handleRetorno($event)" [barbeiro]="barbeiroEdit"></app-barbeiro-form>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

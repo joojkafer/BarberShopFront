@@ -1,0 +1,44 @@
+/* Estilo para o header customizado */
+.bg-dark-custom {
+  background-color: #181818;
+}
+
+.navbar-brand {
+  color: #00ff88;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #00ff88;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.text-danger {
+  color: #ff4444 !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 255, 136, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}

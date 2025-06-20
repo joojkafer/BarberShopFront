@@ -1,0 +1,84 @@
+/* Card Principal */
+.card {
+    background-color: #191919;
+    color: #00ff99;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Título do Card */
+  .card-title {
+    color: #00ff99;
+    font-weight: bold;
+  }
+  
+  /* Botão Cadastrar Barbeiro */
+  .btn-success {
+    background-color: #00ff99;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-success:hover {
+    background-color: #00cc77;
+  }
+  
+  /* Tabela */
+  .table {
+    color: #00ff99;
+    background-color: #191919;
+    border: 1px solid #444;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #1e1e1e;
+  }
+  
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: #2a2a2a;
+  }
+  
+  /* Cabeçalho da Tabela */
+  .table thead th {
+    color: #00ff99;
+    background-color: #191919;
+    border-bottom: 2px solid #00ff99;
+  }
+  
+  /* Células da Tabela */
+  .table tbody td {
+    color: #ffffff;
+  }
+  
+  /* Botões de Ação */
+  .btn-primary {
+    background-color: #00ff99;
+    color: #000;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #00cc77;
+  }
+  
+  .btn-danger {
+    background-color: #ff5555;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-danger:hover {
+    background-color: #ff3333;
+  }
+  
+  /* Mensagem de "Não há barbeiros cadastrados" */
+  .text-center {
+    color: #aaa;
+  }
+  

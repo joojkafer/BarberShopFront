@@ -1,0 +1,60 @@
+/* Container Principal */
+.container.main {
+    color: #00ff99;
+  }
+  
+  /* Card */
+  .card {
+    background-color: #191919;
+    color: #00ff99;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Título */
+  .card-body h2 {
+    color: #00ff99;
+    font-weight: bold;
+  }
+  
+  /* Tabela */
+  .table-striped {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .table-striped th {
+    color: #00ff99;
+    font-weight: bold;
+    background-color: #333;
+    border-bottom: 2px solid #00ff99;
+  }
+  
+  .table-striped td {
+    color: #ffffff;
+  }
+  
+  .table-striped tbody tr:nth-child(even) {
+    background-color: #242424;
+  }
+  
+  .text-center {
+    color: #ffffff;
+  }
+  
+  /* Lista de Serviços */
+  ul {
+    padding-left: 1rem;
+  }
+  
+  ul li {
+    color: #00ff99;
+  }
+  
+  /* Mensagem de Nenhum Agendamento */
+  .text-center {
+    font-style: italic;
+  }
+  

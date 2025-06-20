@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+body{
+    background-color: rgb(37, 37, 37);
+    font-family: 'arial';font-size: 22px;
+}
+
+.right{
+    text-align: right;
+}
+
+.tbtop{
+    padding-top: 10px;
+}
+
+.actionbtn{
+    width: 45%;
+}
+
+.main{
+    padding-top: 3%;
+}
+
+

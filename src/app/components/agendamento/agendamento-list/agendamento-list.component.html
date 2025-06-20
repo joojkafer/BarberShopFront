@@ -1,0 +1,63 @@
+<div class="container main">
+  <div class="card">
+    <div class="card-body">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <h2>Agendamentos</h2>
+        </div>
+        <div class="col-md-6 text-end">
+          <button class="btn btn-primary" (click)="novo()">Cadastrar</button>
+        </div>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Horário</th>
+            <th>Preço (R$)</th>
+            <th>Cliente</th>
+            <th>Barbeiro</th>
+            <th>Serviço(s)</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (agendamento of listaAgendamentos; track $index) {
+            <tr>
+              <td>{{ agendamento.horariosAgendamento | date: 'yyyy-MM-dd HH:mm' }}</td>
+              <td>{{ agendamento.valorTotal | currency: 'BRL' }}</td>
+              <td>{{ agendamento.cliente.nome }}</td>
+              <td>{{ agendamento.barbeiro.nome }}</td>
+              <td>
+                <ul>
+                  @for (servico of agendamento.servicos; track $index) {
+                    <li>{{ servico.nome }}</li>
+                  }
+                </ul>
+              </td>
+              <td>
+                <button class="btn btn-primary me-2" (click)="editar(agendamento)">Editar</button>
+                <button class="btn btn-danger" (click)="excluir(agendamento.idAgendamento)">Excluir</button>
+              </td>
+            </tr>
+          }
+          @if (listaAgendamentos.length === 0) {
+            <tr>
+              <td colspan="6" class="text-center">Nenhum agendamento encontrado.</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal para o formulário de agendamento -->
+  <ng-template #modalAgendamentoForm>
+    <div class="modal-header">
+      <h5 class="modal-title">{{ agendamentoEdit.idAgendamento ? 'Editar Agendamento' : 'Novo Agendamento' }}</h5>
+      <button type="button" class="btn-close" (click)="modalRef.close()"></button>
+    </div>
+    <div class="modal-body">
+      <app-agendamento-form [agendamento]="agendamentoEdit" (retorno)="retornoForm($event)"></app-agendamento-form>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,47 @@
+<div class="container main"> 
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Clientes</h2>
+                        </div>
+                        <div class="col-md-6 right">
+                            <button type="button" class="btn btn-primary" mdbRipple routerLink="/admin/cliente/new">Cadastrar</button>
+                        </div>
+                    </div>
+                    <table border=1 class="table table-striped tbtop">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Telefone</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (cliente of lista; track $index) {
+                                <tr>
+                                    <td>{{cliente.nome}}</td>
+                                    <td>{{cliente.cpf}}</td>
+                                    <td>{{cliente.telefone}}</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <button type="button" class="btn btn-primary actionbtn me-2" (click)="editar(cliente.idCliente)" mdbRipple>
+                                                Editar
+                                            </button>
+                                            <button type="button" class="btn btn-danger actionbtn" (click)="excluir(cliente.idCliente)" mdbRipple>
+                                                Deletar
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

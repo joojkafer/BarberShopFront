@@ -1,0 +1,102 @@
+/* Estilo principal do card */
+.card {
+    background-color: #191919;
+    color: #00ff99;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilo do título */
+  h2 {
+    color: #00ff99;
+    font-weight: bold;
+  }
+  
+  /* Botões principais */
+  .btn-primary {
+    background-color: #00ff99;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #00cc77;
+  }
+  
+  /* Botões de ação */
+  .actionbtn {
+    background-color: #00ff99;
+    color: #000;
+    border: none;
+    padding: 6px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .actionbtn:hover {
+    background-color: #00cc77;
+  }
+  
+  /* Botão de excluir em vermelho */
+  .btn-danger {
+    background-color: #cc0000;
+    color: #ffffff;
+    border: none;
+    padding: 6px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-danger:hover {
+    background-color: #990000;
+  }
+  
+  /* Estilos da tabela */
+  .table {
+    color: #ffffff;
+    background-color: #1e1e1e;
+  }
+  
+  .table th {
+    color: #00ff99;
+    background-color: #2e2e2e;
+    text-align: center;
+  }
+  
+  .table td {
+    color: #ffffff;
+    background-color: #191919;
+  }
+  
+  .tbtop {
+    border-top: 1px solid #00ff99;
+  }
+  
+  /* Campos de entrada */
+  input[type="text"], select {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    border: 1px solid #00ff99;
+    border-radius: 0.3rem;
+  }
+  
+  /* Estilo para os ícones */
+  .fas {
+    color: inherit;
+  }
+  
+  /* Ajuste de margem e alinhamento */
+  .right {
+    text-align: right;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .me-2 {
+    margin-right: 0.5rem;
+  }
+  

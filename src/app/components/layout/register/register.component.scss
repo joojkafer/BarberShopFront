@@ -1,0 +1,52 @@
+/* Estilo para o layout da página de login */
+.gradient-custom {
+  background: #0d0d0d; /* Fundo escuro */
+  color: #ffffff;      /* Texto branco */
+}
+
+/* Estilo para o cartão de login */
+.custom-card {
+  background-color: #1f1f1f; /* Fundo do card */
+  color: #ffffff; /* Cor do texto */
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Estilo para os inputs */
+.custom-input {
+  background-color: #333333; /* Fundo do input */
+  color: #ffffff; /* Cor do texto do input */
+  border: 1px solid #555555; /* Cor da borda */
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+
+/* Estilo para a borda do input ao focar */
+.custom-input:focus {
+  border-color: #00c851; /* Cor da borda no foco */
+  box-shadow: 0 0 0 0.2rem rgba(0, 200, 81, 0.25);
+}
+
+/* Estilo para o botão de login */
+.custom-button {
+  background-color: #00c851; /* Cor do fundo do botão */
+  color: white; /* Cor do texto */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo do botão ao passar o mouse */
+.custom-button:hover {
+  background-color: #007e33; /* Cor do fundo ao passar o mouse */
+}
+
+/* Estilo para o link de "Esqueci minha senha" */
+.text-success {
+  color: #00c851 !important;
+  font-weight: 500;
+}

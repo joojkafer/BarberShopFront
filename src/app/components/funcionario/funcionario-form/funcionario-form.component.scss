@@ -1,0 +1,81 @@
+/* Container Principal */
+.container.main {
+    color: #00ff99;
+  }
+  
+  /* Card */
+  .card {
+    background-color: #191919;
+    color: #00ff99;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Título do Formulário */
+  .card-body h2 {
+    color: #00ff99;
+    font-weight: bold;
+  }
+  
+  /* Input Fields */
+  .form-control {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #4b4a4a;
+    border-radius: 0.5rem;
+  }
+  
+  .form-control:focus {
+    border-color: #00ff99;
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 153, 0.25);
+  }
+  
+  /* Labels */
+  .form-label {
+    color: #00ff99;
+  }
+  
+  /* Select Dropdown */
+  select.form-control {
+    background-color: #2a2a2a;
+    color: #ffffff;
+  }
+  
+  select.form-control option {
+    color: #000;
+  }
+  
+  /* Primary Button */
+  .btn-primary {
+    background-color: #00ff99;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #00cc77;
+  }
+  
+  /* Secondary Button */
+  .btn-secondary {
+    background-color: #333;
+    color: #00ff99;
+    border: 1px solid #00ff99;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #444;
+    color: #ffffff;
+  }
+  
+  .container.main{
+    background-color: #191919;
+    
+  }

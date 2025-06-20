@@ -1,0 +1,88 @@
+<div class="container main">
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-8 col-md-10">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="fw-bold mb-4 text-center">
+            {{ funcionario.idUsuario ? 'Editar Funcionário' : 'Cadastrar Funcionário' }}
+          </h2>
+          <form #formulario="ngForm">
+            <div class="mb-4">
+              <input
+                mdbInput
+                type="text"
+                id="nome"
+                class="form-control"
+                name="nome"
+                [(ngModel)]="funcionario.nome"
+                required
+                minlength="3"
+              />
+              <label mdbLabel class="form-label" for="nome">Nome</label>
+            </div>
+
+            <div class="mb-4">
+              <input
+                mdbInput
+                type="text"
+                id="login"
+                class="form-control"
+                name="login"
+                [(ngModel)]="funcionario.login"
+                required
+              />
+              <label mdbLabel class="form-label" for="login">Login</label>
+            </div>
+
+            <div class="mb-4">
+              <input
+                mdbInput
+                type="password"
+                id="senha"
+                class="form-control"
+                name="senha"
+                [(ngModel)]="funcionario.senha"
+                [required]="funcionario.idUsuario === 0"
+              />
+              <label mdbLabel class="form-label" for="senha">Senha</label>
+            </div>
+
+            <div class="mb-4">
+              <select
+                mdbInput
+                id="role"
+                class="form-control"
+                name="role"
+                [(ngModel)]="funcionario.role"
+                required
+              >
+                <option [ngValue]="null" disabled>Selecione um cargo</option>
+                <option value="ADM">Admin</option>
+                <option value="ATENDENTE">Atendente</option>
+              </select>
+              <label mdbLabel class="form-label" for="role">Cargo</label>
+            </div>
+
+            <button
+              mdbRipple
+              type="button"
+              class="btn btn-primary btn-block"
+              [disabled]="!formulario.valid"
+              (click)="salvar()"
+            >
+              {{ funcionario.idUsuario ? 'Atualizar' : 'Salvar' }}
+            </button>
+            <button
+              mdbRipple
+              type="button"
+              class="btn btn-secondary btn-block mt-2"
+              (click)="fecharModal()"
+            >
+              Fechar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

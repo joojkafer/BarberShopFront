@@ -1,0 +1,50 @@
+/* Estilo do card principal */
+.card {
+  background-color: #191919;
+  color: #00ff99;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Título centralizado */
+h2 {
+  color: #00ff99;
+  font-weight: bold;
+}
+
+/* Inputs personalizados */
+.form-control {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #4b4a4a;
+}
+
+.form-control:focus {
+  border-color: #000000;
+  box-shadow: 0 0 0 0.2rem rgba(0, 255, 153, 0.25);
+}
+
+/* Labels */
+.form-label {
+  color: #00ff99;
+}
+
+/* Botão de salvar/atualizar */
+.btn-primary {
+  background-color: #00ff99;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn-primary:disabled {
+  background-color: #00cc77;
+}
+
+.btn-primary:hover {
+  background-color: #00cc77;
+}

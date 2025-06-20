@@ -1,0 +1,86 @@
+/* Estilo do card principal */
+.card {
+    background-color: #191919;
+    color: #00ff99;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Título */
+  h2 {
+    color: #00ff99;
+    font-weight: bold;
+  }
+  
+  /* Botões */
+  .btn-primary {
+    background-color: #00ff99;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #00cc77;
+  }
+  
+  .btn-danger {
+    background-color: #ff4d4d;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-danger:hover {
+    background-color: #e60000;
+  }
+  
+  /* Tabela */
+  .table-striped {
+    background-color: #2e2e2e;
+  }
+  
+  .table-striped thead th {
+    color: #00ff99;
+    border-bottom: 1px solid #444;
+  }
+  
+  .table-striped tbody td {
+    color: #fff;
+  }
+  
+  .table-striped tbody tr:hover {
+    background-color: #333;
+  }
+  
+  /* Lista de serviços dentro da tabela */
+  ul {
+    padding-left: 1rem;
+    list-style-type: disc;
+  }
+  
+  ul li {
+    color: #ffffff;
+  }
+  
+  /* Texto centralizado e colorido para mensagens */
+  .text-center {
+    color: #00ff99;
+  }
+  
+
+  .modal-body{
+    background-color: #2e2e2e;
+
+}
+.modal-header{
+    background-color: #2e2e2e;
+    color: #00ff99;
+
+}

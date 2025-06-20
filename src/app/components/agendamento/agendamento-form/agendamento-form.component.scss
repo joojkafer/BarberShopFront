@@ -1,0 +1,87 @@
+/* Card Principal */
+.card {
+  background-color: #191919;
+  color: #00ff99;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Título */
+h2 {
+  color: #00ff99;
+  font-weight: bold;
+}
+
+/* Labels */
+.form-label {
+  color: #00ff99;
+}
+
+/* Input Campos */
+.form-control {
+  background-color: #2e2e2e;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.form-control:focus {
+  border-color: #00ff99;
+  box-shadow: 0 0 5px rgba(0, 255, 153, 0.5);
+}
+
+/* Botões */
+.btn-primary {
+  background-color: #00ff99;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #00cc77;
+}
+
+.btn-secondary {
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #555;
+}
+
+/* Seleção múltipla */
+.form-control[multiple] {
+  background-color: #2e2e2e;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+.form-control[multiple] option {
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+
+.form-control[multiple]:focus {
+  border-color: #00ff99;
+}
+
+.modal-body{
+    background-color: #2e2e2e;
+
+}
+.modal-header{
+    background-color: #71cc08;
+
+}

@@ -1,0 +1,72 @@
+/* Estilo Principal do Container */
+.container.main {
+    color: #00ff99;
+  }
+  
+  /* Card */
+  .card {
+    background-color: #191919;
+    color: #00ff99;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Título */
+  .card-body h2 {
+    color: #00ff99;
+    font-weight: bold;
+  }
+  
+  /* Tabela */
+  .table {
+    color: #00ff99;
+    background-color: #2a2a2a;
+  }
+  
+  .table th {
+    color: #00ff99;
+  }
+  
+  .table td {
+    color: #ffffff;
+    background-color: #333333;
+    border-color: #444444;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #2a2a2a;
+  }
+  
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: #333333;
+  }
+  
+  /* Botões */
+  .btn-primary {
+    background-color: #00ff99;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #00cc77;
+  }
+  
+  .btn-danger {
+    background-color: #ff3333;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-danger:hover {
+    background-color: #cc0000;
+  }
+  
