@@ -8,7 +8,8 @@
                             <h2>Serviços</h2>
                         </div>
                         <div class="col-md-6 right">
-                            <button type="button" class="btn btn-primary" mdbRipple routerLink="/admin/servico/new">Cadastrar</button>
+                            <button type="button" class="btn btn-primary" mdbRipple
+                                routerLink="/admin/servico/new">Cadastrar</button>
                         </div>
                     </div>
                     <table border=1 class="table table-striped tbtop">
@@ -17,28 +18,34 @@
                                 <th>Nome</th>
                                 <th>Descrição</th>
                                 <th>Valor</th>
+                                <th>Criado por</th>
+                                <th>Criado em</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
                             @for (servico of lista; track $index) {
-                                <tr>
-                                    <td>{{ servico.nome }}</td>
-                                    <td>{{ servico.descricao }}</td>
-                                    <td>{{ servico.valor | currency:'BRL':'symbol':'1.2-2' }}</td> <!-- Aplicando formatação de moeda -->
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <button type="button" class="btn btn-primary actionbtn me-2" (click)="editar(servico.idServico)" mdbRipple>
-                                                Editar
-                                            </button>
-                                            @if(loginService.hasPermission("ADMIN")){
-                                            <button type="button" class="btn btn-danger actionbtn" (click)="excluir(servico.idServico)" mdbRipple>
-                                                Excluir
-                                            </button>
+                            <tr>
+                                <td>{{ servico.nome }}</td>
+                                <td>{{ servico.descricao }}</td>
+                                <td>{{ servico.valor | currency:'BRL':'symbol':'1.2-2' }}</td>
+                                <td>{{ servico.createdBy }}</td>
+                                <td>{{ servico.createDate | date:'dd/MM/yyyy HH:mm' }}</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <button type="button" class="btn btn-primary actionbtn me-2"
+                                            (click)="editar(servico.idServico)" mdbRipple>
+                                            Editar
+                                        </button>
+                                        @if(loginService.hasPermission("ADMIN")){
+                                        <button type="button" class="btn btn-danger actionbtn"
+                                            (click)="excluir(servico.idServico)" mdbRipple>
+                                            Excluir
+                                        </button>
                                         }
-                                        </div>
-                                    </td>
-                                </tr>
+                                    </div>
+                                </td>
+                            </tr>
                             }
                         </tbody>
                     </table>

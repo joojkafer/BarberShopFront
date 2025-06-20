@@ -17,6 +17,8 @@
                 <th>Nome</th>
                 <th>Login</th>
                 <th>Cargo</th>
+                <th>Criado por</th>
+                <th>Data Criação</th>
                 <th>Ações</th>
               </tr>
             </thead>
@@ -25,21 +27,22 @@
                 <td>{{funcionario.nome}}</td>
                 <td>{{funcionario.login}}</td>
                 <td>{{funcionario.role}}</td>
+                <td>{{funcionario.createdBy}}</td>
+                <td>{{funcionario.createDate | date:'dd/MM/yyyy HH:mm'}}</td>
                 <td>
                   <div class="d-flex align-items-center">
-                    <button type="button" class="btn btn-primary actionbtn me-2" (click)="editar(funcionario.idUsuario)" mdbRipple>
+                    <button type="button" class="btn btn-primary actionbtn me-2" (click)="editar(funcionario.idUsuario)"
+                      mdbRipple>
                       Editar
                     </button>
                     @if(loginService.hasPermission("ADMIN")){
-                    <button type="button" class="btn btn-danger actionbtn" (click)="excluir(funcionario.idUsuario)" mdbRipple>
+                    <button type="button" class="btn btn-danger actionbtn" (click)="excluir(funcionario.idUsuario)"
+                      mdbRipple>
                       Excluir
                     </button>
-                  }
+                    }
                   </div>
                 </td>
-              </tr>
-              <tr *ngIf="lista.length === 0">
-                <td colspan="4" class="text-center">Nenhum funcionário encontrado.</td>
               </tr>
             </tbody>
           </table>

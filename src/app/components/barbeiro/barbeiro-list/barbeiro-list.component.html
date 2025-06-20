@@ -11,34 +11,38 @@
 
           <table class="table table-striped">
             <thead>
-              <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>CPF</th>
-                <th>Status</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              @for (barbeiro of barbeiros; track barbeiro.idBarbeiro) {
-                <tr>
-                  <td>{{ barbeiro.idBarbeiro }}</td>
-                  <td>{{ barbeiro.nome }}</td>
-                  <td>{{ barbeiro.cpf }}</td>
-                  <td>{{ barbeiro.status ? 'Ativo' : 'Inativo' }}</td>
-                  <td>
-                    <button class="btn btn-primary me-2" (click)="editarBarbeiro(barbeiro)">Editar</button>
-                    @if(loginService.hasPermission("ADMIN")){
-                    <button class="btn btn-danger" (click)="excluirBarbeiro(barbeiro)">Excluir</button>
-                    }
-                  </td>
-                </tr>
-              } @empty {
-                <tr>
-                  <td class="text-center" colspan="5">Não há barbeiros cadastrados.</td>
-                </tr>
-              }
-            </tbody>
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>CPF</th>
+    <th>Status</th>
+    <th>Criado por</th>
+    <th>Data Criação</th>
+    <th>Ações</th>
+  </tr>
+</thead>
+<tbody>
+  @for (barbeiro of barbeiros; track barbeiro.idBarbeiro) {
+    <tr>
+      <td>{{ barbeiro.idBarbeiro }}</td>
+      <td>{{ barbeiro.nome }}</td>
+      <td>{{ barbeiro.cpf }}</td>
+      <td>{{ barbeiro.status ? 'Ativo' : 'Inativo' }}</td>
+      <td>{{ barbeiro.createdBy }}</td>
+      <td>{{ barbeiro.createDate | date:'dd/MM/yyyy HH:mm'}}</td>
+      <td>
+        <button class="btn btn-primary me-2" (click)="editarBarbeiro(barbeiro)">Editar</button>
+        @if(loginService.hasPermission("ADMIN")){
+        <button class="btn btn-danger" (click)="excluirBarbeiro(barbeiro)">Excluir</button>
+        }
+      </td>
+    </tr>
+  } @empty {
+    <tr>
+      <td class="text-center" colspan="7">Não há barbeiros cadastrados.</td>
+    </tr>
+  }
+</tbody>
           </table>
 
           <h5 class="card-title">Exibindo {{ barbeiros.length }} barbeiros</h5>

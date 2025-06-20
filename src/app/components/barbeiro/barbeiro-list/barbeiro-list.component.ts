@@ -10,13 +10,14 @@ import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 import { BarbeiroService } from '../../../services/barbeiro.service';
 import { Barbeiro } from '../../../models/barbeiro';
 import { LoginService } from '../../../../auth/login.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-barbeiro-list',
   templateUrl: './barbeiro-list.component.html',
   styleUrls: ['./barbeiro-list.component.scss'],
   standalone: true,
-  imports: [BarbeiroFormComponent, FormsModule, MdbModalModule]
+  imports: [BarbeiroFormComponent, FormsModule, MdbModalModule, CommonModule]
 })
 export class BarbeiroListComponent implements OnInit {
 

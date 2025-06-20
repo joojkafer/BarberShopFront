@@ -12,6 +12,11 @@ export class Agendamento {
   funcionario: Funcionario;
   servicos: Servico[];
 
+  createdBy?: string;
+  createDate?: Date;
+  lastModifiedBy?: string;
+  lastModified?: Date;
+
   constructor(init?: Partial<Agendamento>) {
     this.idAgendamento = init?.idAgendamento ?? 0;
     this.horariosAgendamento = init?.horariosAgendamento ? new Date(init.horariosAgendamento) : new Date();
@@ -20,5 +25,9 @@ export class Agendamento {
     this.barbeiro = init?.barbeiro ?? new Barbeiro();
     this.funcionario = init?.funcionario ?? new Funcionario();
     this.servicos = init?.servicos ?? [];
+    this.createdBy = init?.createdBy;
+    this.createDate = init?.createDate ? new Date(init.createDate) : undefined;
+    this.lastModifiedBy = init?.lastModifiedBy;
+    this.lastModified = init?.lastModified ? new Date(init.lastModified) : undefined;
   }
 }

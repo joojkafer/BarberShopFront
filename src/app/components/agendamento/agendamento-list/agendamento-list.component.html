@@ -17,33 +17,37 @@
             <th>Cliente</th>
             <th>Barbeiro</th>
             <th>Serviço(s)</th>
+            <th>Criado por</th>
+            <th>Data Criação</th>
             <th>Ações</th>
           </tr>
         </thead>
         <tbody>
           @for (agendamento of listaAgendamentos; track $index) {
-            <tr>
-              <td>{{ agendamento.horariosAgendamento | date: 'yyyy-MM-dd HH:mm' }}</td>
-              <td>{{ agendamento.valorTotal | currency: 'BRL' }}</td>
-              <td>{{ agendamento.cliente.nome }}</td>
-              <td>{{ agendamento.barbeiro.nome }}</td>
-              <td>
-                <ul>
-                  @for (servico of agendamento.servicos; track $index) {
-                    <li>{{ servico.nome }}</li>
-                  }
-                </ul>
-              </td>
-              <td>
-                <button class="btn btn-primary me-2" (click)="editar(agendamento)">Editar</button>
-                <button class="btn btn-danger" (click)="excluir(agendamento.idAgendamento)">Excluir</button>
-              </td>
-            </tr>
+          <tr>
+            <td>{{ agendamento.horariosAgendamento | date: 'yyyy-MM-dd HH:mm' }}</td>
+            <td>{{ agendamento.valorTotal | currency: 'BRL' }}</td>
+            <td>{{ agendamento.cliente.nome }}</td>
+            <td>{{ agendamento.barbeiro.nome }}</td>
+            <td>
+              <ul>
+                @for (servico of agendamento.servicos; track $index) {
+                <li>{{ servico.nome }}</li>
+                }
+              </ul>
+            </td>
+            <td>{{ agendamento.createdBy }}</td>
+            <td>{{ agendamento.createDate | date: 'dd/MM/yyyy HH:mm' }}</td>
+            <td>
+              <button class="btn btn-primary me-2" (click)="editar(agendamento)">Editar</button>
+              <button class="btn btn-danger" (click)="excluir(agendamento.idAgendamento)">Excluir</button>
+            </td>
+          </tr>
           }
           @if (listaAgendamentos.length === 0) {
-            <tr>
-              <td colspan="6" class="text-center">Nenhum agendamento encontrado.</td>
-            </tr>
+          <tr>
+            <td colspan="8" class="text-center">Nenhum agendamento encontrado.</td>
+          </tr>
           }
         </tbody>
       </table>
